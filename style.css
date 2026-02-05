@@ -7,13 +7,12 @@ body {
 }
 
 .logo {
-  width: 120px;
-  height: auto;
-  max-width: 100%;
-  display: block;
-  margin: 0 auto 20px auto;
+  width: 120px !important;
+  max-width: 120px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto 20px auto !important;
 }
-
 header {
   background: linear-gradient(
     rgba(31,111,139,0.8),
@@ -75,6 +74,7 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
 
 
 
