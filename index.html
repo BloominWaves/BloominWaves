@@ -12,7 +12,7 @@
 <header>
   <img src="logo-bloominwaves.png" alt="BloominWaves logo" class="logo">
   <h1>BloominWaves</h1>
-  <p>Cartographie, analyse territoriale et communication environnementale</p>
+  <p>Donner du sens à vos territoires</p>
   <a href="#services" class="btn">Découvrir les services</a>
 </header>
 
@@ -71,15 +71,15 @@
   <div class="gallery-grid">
     <div class="gallery-item">
       <img src="Capture2.PNG" alt="Vue 2D Bear-Bloc">
-      <p class="gallery-caption">Modélisation technique Bear-Bloc</p>
+      <p class="gallery-caption">Outil DAO Autocad 2D</p>
     </div>
     <div class="gallery-item">
       <img src="Capture3.PNG" alt="Plan de pose monocouche">
-      <p class="gallery-caption">Plan de pose monocouche</p>
+      <p class="gallery-caption">Outil DAO Sketchup 3D </p>
     </div>
     <div class="gallery-item">
       <img src="map2.jpg" alt="Carte des territoires étudiés du Cotentin">
-      <p class="gallery-caption">Cartographie territoriale - Cotentin</p>
+      <p class="gallery-caption">Cartographie SIG QGIS</p>
     </div>
     <div class="gallery-item">
       <img src="map1.jpg" alt="Carte globale des territoires étudiés avec PPA">
@@ -141,7 +141,7 @@
   <p>© BloominWaves – Assia Zarrouki</p>
 </footer>
 
-<!-- Lightbox for image zoom -->
+
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
   <img class="lightbox-content" id="lightbox-img">
@@ -149,30 +149,28 @@
 </div>
 
 <script>
-// Lightbox functionality
+
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxCaption = document.getElementById('lightbox-caption');
 const lightboxClose = document.querySelector('.lightbox-close');
 
-// Add click event to all gallery images
 document.querySelectorAll('.gallery-item img').forEach(img => {
   img.style.cursor = 'pointer';
   img.addEventListener('click', function() {
     lightbox.style.display = 'flex';
     lightboxImg.src = this.src;
     lightboxCaption.textContent = this.alt;
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
+    document.body.style.overflow = 'hidden'; 
   });
 });
 
-// Close lightbox when clicking X
+
 lightboxClose.addEventListener('click', function() {
   lightbox.style.display = 'none';
   document.body.style.overflow = 'auto';
 });
 
-// Close lightbox when clicking outside image
 lightbox.addEventListener('click', function(e) {
   if (e.target === lightbox) {
     lightbox.style.display = 'none';
@@ -180,7 +178,7 @@ lightbox.addEventListener('click', function(e) {
   }
 });
 
-// Close lightbox with Escape key
+
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape' && lightbox.style.display === 'flex') {
     lightbox.style.display = 'none';
